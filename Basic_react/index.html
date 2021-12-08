@@ -13,8 +13,25 @@
   ></script>
   <script>
     const root = document.getElementById("root");
-    const span = React.createElement("span", null, "Hi I am a span!");
-    const btn = React.createElement("button", null, "Click me");
-    ReactDOM.render(btn, root);
+    const h2 = React.createElement(
+      "h2",
+      {
+        id: "title",
+        onMouseEnter: () => console.log("mouse enter"),
+      },
+      "Hi I am a span!"
+    );
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("i'm clicked"),
+        style: {
+          backgroundColor: "tomato",
+        },
+      },
+      "Click me"
+    );
+    const container = React.createElement("div", null, [h2, btn]);
+    ReactDOM.render(container, root);
   </script>
 </html>
