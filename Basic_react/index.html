@@ -13,14 +13,19 @@
   ></script>
   <script>
     const root = document.getElementById("root");
-    const h2 = React.createElement(
-      "h2",
-      {
-        id: "title",
-        onMouseEnter: () => console.log("mouse enter"),
-      },
-      "Hi I am a span!"
+    const Title = (
+      <h2 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hi I am a title!
+      </h2>
     );
+    // const h2 = React.createElement(
+    //   "h2",
+    //   {
+    //     id: "title",
+    //     onMouseEnter: () => console.log("mouse enter"),
+    //   },
+    //   "Hi I am a title!"
+    // );
     const btn = React.createElement(
       "button",
       {
