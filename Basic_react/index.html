@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body></body>
+  <body>
+    <div id="root"></div>
+  </body>
   <script
     src="https://unpkg.com/react@17/umd/react.development.js"
     crossorigin
@@ -11,14 +13,8 @@
   ></script>
   <script>
     const root = document.getElementById("root");
-    const Title = <h3 id="title" onMouseEnter={() => console.log("mouse enter")>Hello I'm a title
-      </h3>
-
-    const Button = <button style={{
-      backgroundColor: "tomato",
-    }}
-    onClick=
-    >Click me</button>
-    ReactDOM.render(container, root);
+    const span = React.createElement("span", null, "Hi I am a span!");
+    const btn = React.createElement("button", null, "Click me");
+    ReactDOM.render(btn, root);
   </script>
 </html>
